@@ -1,0 +1,264 @@
+﻿ /*Copyright Kalmstrom Enterprises AB http://www.kalmstrom.com/*/
+ 
+/* Reset */
+img,p,h1,h2,h3,h4,h5,h6,ul,ol {margin:0; padding:0; list-style:none; border:none;}
+
+body {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    background: url("img/inner-bg.png") repeat-x top left;
+}
+/* End Reset */
+
+#txtSearch
+{
+    float: left;
+    margin-left: 10px;
+}
+#cmdSearch {
+    cursor: pointer;
+    float: left;
+    margin-left: 2px;
+}
+
+
+.list-title {
+    -webkit-user-select: none; /* Safari, Chrome */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    user-select: none; /* CSS3 */    
+
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.Project-list {
+    float: left;
+}
+
+.Project-list select {
+    width: 100px;
+}
+
+.Responsible-list {
+    float: left;
+}
+
+.Responsible-list select {
+    width: 100px;
+}
+
+
+#optProject, #optResponsible{
+	width:200px;	
+}
+.list-row {
+    float: left;
+    padding-top: 5px;  
+    width:100%;  
+	border-bottom: 1px dashed #8Eb2cd;
+	padding-bottom: 10px;
+}
+
+.main
+{
+	width:auto;	
+	float:left;
+}
+	
+div.SubMain {
+	padding:12px;
+	font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+}
+
+.column
+{
+	height: 20px !important;
+}
+
+.portlet { 
+    -webkit-user-select: none; /* Safari, Chrome */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    user-select: none; /* CSS3 */
+    
+    margin: 0 1em 1em 0;
+    border:1px solid;
+    
+    /*behavior: url(/css/border-radius.htc);*/
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+     /* Shadow */
+    box-shadow: 2px 2px 3px silver;
+    -moz-box-shadow: 2px 2px 3px silver;
+    -webkit-box-shadow:  2px 2px 3px silver;
+    box-shadow:  2px 2px 3px silver;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='silver')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='silver');
+}
+
+.portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; cursor:move ;height:100px;z-index:1;opacity:1}
+.portlet-content { padding: 0.4em;z-index:0}
+
+.ui-sortable-placeholder { border: 2px dashed #999; visibility: visible !important; height: 100px !important; width: 222px !important;margin: 18px 11px 18px 8px; }
+.ui-sortable-placeholder * { visibility: hidden; }
+
+
+.portlet-contents {
+    color: #000000;
+    height: 50px;
+    line-height: 1.2em;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 0px 0px 0px 5px;
+    text-align: left;
+    width: 175px;
+	position: absolute;
+}
+
+.pr-row {
+	font-size: 13px;
+	width: 100%;
+	border-top: 1px dashed #000000 !important;
+	margin-top: 35px;
+	float: left;
+}
+
+
+.p-title {
+    float: left;
+	width: 45%;
+	padding:0 0px;
+	overflow: hidden;
+	height:20px;
+	line-height:20px;
+    font-size: 12px;
+}
+.r-title {
+    float: right;
+	text-align: right;
+	width: 45%;
+	padding:0 0px;
+	overflow: hidden;
+	height:20px;
+	line-height:20px;
+        font-size: 12px;
+}
+
+
+.pin
+{
+	background: url("img/pin.png") no-repeat scroll center 0 transparent;
+	height: 20px;
+	width: 46px;
+	position: relative;
+	top: -25px;
+	left: 90px;
+	float: left;
+}
+
+
+
+.remove {
+    background: url("img/remove.png") no-repeat scroll center 0 transparent; 
+    cursor: pointer;
+    height: 20px;
+	margin-top: -22px;
+	margin-left: 205px;
+	position: absolute;
+    width: 20px;
+    display:none;
+}
+
+
+
+/* This css is applicable after integrating Redips */
+.edit {
+   background: url("img/edit.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 16px;
+	margin-top: -22px;
+	margin-left: 192px;
+    position: absolute;
+    width: 16px;
+    display:none;
+}
+
+.phase
+{
+    -webkit-user-select: none; /* Safari, Chrome */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    user-select: none; /* CSS3 */
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold !important;
+    width: 100%;
+    position: relative !important;
+    top: 0px;
+}
+
+
+.Task_title{
+    padding-left:5px;
+    padding-right:5px;	
+    border-bottom: 1px dashed;
+    margin-bottom:5px;
+    overflow:hidden;
+    width:215px;	
+    height:20px;
+    line-height:20px;
+    font-size: 12px;
+}
+
+#imgProgress {
+    top:50%;
+}
+.debug
+{
+    display:none;
+    /*change to none before deployment to customer*/
+}
+
+#divWorking {
+    display:none;
+}
+.translatable {
+    display:none;
+}
+
+.selectedTask {
+    border-color:blue;
+     /* Shadow */
+    box-shadow: 2px 2px 5px black;
+    -moz-box-shadow: 2px 2px 5px black;
+    -webkit-box-shadow:  2px 2px 5px black;
+    box-shadow:  2px 2px 5px black;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='black')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='black');    
+}
+
+#footer {
+    position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background:#333;
+	padding:8px;
+    display:none;
+}
+
+.ui-button
+{
+    min-width:55px;
+}

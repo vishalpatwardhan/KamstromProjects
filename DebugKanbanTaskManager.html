@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta name="author" content="Darko Bunic"/>
+		<meta name="description" content="Drag and drop table content with JavaScript"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no"/><!-- "position: fixed" fix for Android 2.2+ -->
+		<script type="text/javascript" src="js/lib/redips-drag-min.js"></script>
+		<link rel='stylesheet' href='css\cupertino\jquery-ui-1.8.22.custom.css' />
+		<link rel='stylesheet' href='css\KTM.css' />
+		<script type='text/javascript' src='js/lib/jquery-1.8.0.min.js'></script>
+		<script type='text/javascript' src='js/lib/css_browser_selector.js'></script>
+		<script type='text/javascript' src="js/lib/jquery-ui-1.8.23.custom.min.js"></script>
+		<script type='text/javascript' src='js/lib/kalmstromShared.js'></script>
+		<script type='text/javascript' src='js/dynamic.js'></script>
+		<script type='text/javascript' src='js/KTM.js'></script>
+		<script type='text/javascript' src='js/KTMGlobalObjects.js'></script>
+		<script type='text/javascript' src='js/KTMSearch.js'></script>
+		<script type='text/javascript' src='js/KTMTaskInteraction.js'></script>
+		<script type='text/javascript' src='js/KTMPhrases.js'></script>
+		<script type='text/javascript' src='js/KTMOutlookAddonInteraction.js'></script>
+		<script type='text/javascript' src="js/KTMDebug.js"></script>
+		
+		<!-- css applicable for all browser -->
+		<style type="text/css">
+			th
+			{
+				min-width: 250px;
+			}
+			td
+			{	
+				background-color : white !important;
+				white-space: nowrap !important;
+				
+			}
+			.phase
+			{
+				background-color: white !important;
+			}
+			.drag
+			{
+				border-style: none !important;
+				background-color: white;
+				display: inline-block;
+			div
+			{
+			 border-style: none !important;	
+			}
+		</style>
+		<style type="text/css">
+			#txtAction
+				{
+				width: 282px;
+				height: 14px;
+				}
+				#txtOutCommands
+				{
+				width: 283px;
+				height: 49px;
+				}
+				#txtInCommands
+				{
+				width: 247px;
+					height: 55px;
+				}
+				.debug 
+				{
+					display:inline;
+				}
+		</style>
+		
+		<title>DebugKanbanTaskManager</title>
+	</head>
+	<body>
+		<div class='list-row' >
+  <div class='Project-list'>
+    <div class='list-title translatable' unselectable="on">LNGPROJECT</div>
+    <select name='optProject' id='optProject'></select>
+  </div>
+  <div class='Responsible-list'>
+    <div class='list-title  translatable' unselectable="on">LNGASSIGNTO</div>
+    <select name='optResponsible' id='optResponsible'></select>
+  </div>
+    <input id="txtSearch" type="text" /><img alt="Search" src="css/img/search.png" id="cmdSearch"/> 
+    
+
+<div class = 'main' unselectable="on">
+  <div class='SubMain' style='height:auto;width:auto;z-index:0' unselectable="on">
+      
+  </div>
+</div>
+
+    Settings Json
+
+<textarea id="txtSettings" cols="20" rows="2" class="debug"></textarea>
+    Tasks Json<textarea id="txtTasks" cols="20" rows="2" class="debug"></textarea>&nbsp;&nbsp;
+&nbsp;
+&nbsp;
+<input id="cmdReadSettings" type="button" value="Read Settings and tasks" class="debug" />
+
+<!--Right-click code-->
+<select id="optMaxNumberTasks" class="debug" name="D1">
+    <option value ="100">100</option>
+    <option value ="500">500</option>
+    <option value ="1000">1000</option>
+    <option value ="5000">5000</option>
+    <option value ="10000">10000</option>
+</select><input id="chkDebugMode" type="checkbox" class="debug" /><div id="footer"> 
+    <span>Delete</span><span>Re-assign</span>
+</div>
+
+<!--Shared code
+-->     <div id="divWorking"><div id ="divWorkingCaption" style="float:left"></div><img style="float:right" alt="Working ..." src="css/img/gears_anv4.gif" id="imgProgress"/></div>
+		<div id="drag">
+			<table id="tbldrag">
+			
+			</table>
+		</div>		
+	</body>
+</html>
