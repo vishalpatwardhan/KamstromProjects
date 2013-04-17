@@ -18,7 +18,7 @@
 function InitRedips()
 {
 	// set REDIPS.drag reference
-	var objRedips = REDIPS.drag,strPhaseHTMLID = "",strTaskHTMLID = "";
+	var objRedips = REDIPS.drag,strPhaseHTMLID = "",strTaskHTMLID = "",count = 1;
 	//call init method
 	objRedips.init();
 	// when task object is dropped determine its HtmlId,Phase HtmlId where its 
@@ -33,7 +33,7 @@ function InitRedips()
 			{
 				strTaskHTMLID = nodeList[i].id;
 			}
-		}
+		}  
 		var arrayIds = objRedips.td.target.id.split("_");
 		if	(arrayIds[1] > 6)
 			{
@@ -41,6 +41,17 @@ function InitRedips()
 			}
 		strPhaseHTMLID = "phaseDiv_" + arrayIds[1];
 		TaskMoved(strTaskHTMLID, strPhaseHTMLID);
+		if (count >= 3)
+		{
+			var parent = nodeList.parentNode;
+			parent.style.display = "inline-block";
+		}
+		else
+		{
+			var parent = nodeList.parentNode;
+			parent.style.display = "initial";
+			count++;
+		}
 	}
 }
 

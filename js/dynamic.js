@@ -172,7 +172,9 @@ function CreateTaskStructure(TaskLength)
 					{
 						intPhaseNumber++;
 						intCounter ++;
-						strTaskStructHtml += "<td id = 'phase_" + intCounter + "' class = 'phases'></td>";
+						
+						strTaskStructHtml += "<td id = 'phase_" + intCounter + "' class = 'phases'>";
+						strTaskStructHtml += "</td>";
 					}
 					intResetTaskRow = 1;
 					strTaskStructHtml += "</tr>";
@@ -200,7 +202,6 @@ function createTaskDiv(objCurrTask) {
         }
 		strHtml += "<div class='drag'>";
         strHtml += "<div class='portlet'"; 
-        }
         strHtml += "' id='" + objCurrTask.HTMLID + "'";
         if (strCaptionStyle != "") {
             strHtml += "style=\"background-color:rgb(" + objCurrTask.TaskColor + ")\"";
