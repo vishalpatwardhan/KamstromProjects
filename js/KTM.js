@@ -43,13 +43,13 @@ function InitRedips()
 		TaskMoved(strTaskHTMLID, strPhaseHTMLID);
 		if (count >= 3)
 		{
-			var parent = nodeList.parentNode;
-			parent.style.display = "inline-block";
+			var parent = document.getElementById(strTaskHTMLID);
+			parent.parentNode.style.display = "inline-block";
 		}
 		else
 		{
-			var parent = nodeList.parentNode;
-			parent.style.display = "initial";
+			var parent = document.getElementById(strTaskHTMLID);
+			parent.parentNode.style.display = "initial";
 			count++;
 		}
 	}

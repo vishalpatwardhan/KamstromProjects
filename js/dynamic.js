@@ -204,7 +204,7 @@ function createTaskDiv(objCurrTask) {
         strHtml += "<div class='portlet'"; 
         strHtml += "' id='" + objCurrTask.HTMLID + "'";
         if (strCaptionStyle != "") {
-            strHtml += "style=\"background-color:rgb(" + objCurrTask.TaskColor + ")\"";
+            strHtml += "style=\"background-color:rgb(" + objCurrTask.TaskColor + ");width:235px;\"";
         }
         strSearchString = ClearTroubleChars(objCurrTask.Subject + " " + objCurrTask.TaskBody);
         strSearchString = strSearchString.toUpperCase();
