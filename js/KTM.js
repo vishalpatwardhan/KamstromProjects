@@ -18,9 +18,12 @@
 function InitRedips()
 {
 	// set REDIPS.drag reference
-	var objRedips = REDIPS.drag,strPhaseHTMLID = "",strTaskHTMLID = "",count = 1;
+	var objRedips = REDIPS.drag,strPhaseHTMLID = "",strTaskHTMLID = "",intAvailHeight = 0,intHeaderHeight = 122,intTaskHeight = 118,intMaxVerticalTask = 0,DestinationPhase = new KTMPhase();
 	//call init method
 	objRedips.init();
+	REDIPS.drag.multipleDrop = 'top';
+	intAvailHeight = (screen.availHeight) - intHeaderHeight - intTaskHeight;
+	intMaxVerticalTask = parseInt((intAvailHeight)/(intTaskHeight),10);
 	// when task object is dropped determine its HtmlId,Phase HtmlId where its 
 	// being dropped & updates phase length accordingly
 	objRedips.event.dropped = function () 
@@ -41,8 +44,12 @@ function InitRedips()
 			}
 		strPhaseHTMLID = "phaseDiv_" + arrayIds[1];
 		TaskMoved(strTaskHTMLID, strPhaseHTMLID);
-		if (count >= 3)
+		DestinationPhase = GetObjectByID(strPhaseHTMLID.substring(9), KTMSettings.Phases);
+		if (DestinationPhase.Tasks.length >= intMaxVerticalTask)
 		{
+			alert(strTaskHTMLID);
+//			var PhaseLastTask = document.getElementById(DestinationPhase.Tasks[0].HTMLID);
+//			PhaseFirstTask.parentNode.style.display = "inline-block";
 			var parent = document.getElementById(strTaskHTMLID);
 			parent.parentNode.style.display = "inline-block";
 		}
@@ -50,7 +57,6 @@ function InitRedips()
 		{
 			var parent = document.getElementById(strTaskHTMLID);
 			parent.parentNode.style.display = "initial";
-			count++;
 		}
 	}
 }
